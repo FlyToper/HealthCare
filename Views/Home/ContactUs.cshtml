@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/MyContent/images/ic_launcher.png" rel="shortcut icon" />
+    <title>我要发帖</title>
+
+    <link href="~/Content/themes/base/minified/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/MyContent/css/mycss.css" rel="stylesheet" />
+    <link href="~/MyContent/css/myIndexcss.css" rel="stylesheet" />
+    <link href="~/MyContent/css/base.css" rel="stylesheet" />
+    <link href="~/MyContent/css/demo.css" rel="stylesheet" />
+    <link href="~/MyContent/css/default.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .myLabel {
+            font-size: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #990066;
+        }
+
+        hr {
+            border-color: #A1CFF3;
+        }
+    </style>
+</head>
+<body>
+    <!--------------------------------------------------头部导航开始------------------------------------------------------------->
+    @RenderPage("../Shared/Header.cshtml")
+    <!--------------------------------------------------头部导航结束------------------------------------------------------------->
+    <div style="margin: 40px; border-style: none; border-width: 2px; border-color: #A1CFF3;border-radius:6px;">
+       <div style="background-color:yellow;margin-left:10%;margin-right:10%;background-color:white;padding:10px;border-radius:6px;">
+           <h3>联系我们</h3>
+           <hr />
+           <h4>可以通过以下方式联系我们</h4>
+           <div style="margin-left:3%;margin-top:10px;">
+               <ul>
+                   <li>邮箱：fly13138@163.com</li>
+                   <li>Q  Q：874847721</li>
+               </ul>
+           </div>
+           
+       </div>
+        <!--【内容结束】-->
+    </div>
+
+
+    <!-------------------------------------底部内容开始-------------------------------------------------->
+    @RenderPage("../Shared/Footer.cshtml")
+    <!-------------------------------------底部内容结束-------------------------------------------------->
+
+    <script src="~/MyContent/js/jquery-1.11.2.min.js"></script>
+    @*<script src="~/Scripts/jquery-1.8.2.min.js"></script>*@
+    <script src="~/MyContent/js/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="../MyContent/js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="~/MyContent/ckeditor/ckeditor.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+
+            //导航条初始化
+            $("ul[class$='nav']").children().eq(5).html("<a href='javascript:void(0)' >联系我们 <span class='sr-only'>(current)</span>").addClass("active");
+        });
+
+        function myHelpLink() {
+            $(".btn-lg").click();
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
